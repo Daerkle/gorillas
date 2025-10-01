@@ -39,7 +39,7 @@ export default function DatenschutzPage() {
                     Wer ist verantwortlich für die Datenerfassung auf dieser Website?
                   </p>
                   <p className="text-gray-700 leading-relaxed">
-                    Die Datenverarbeitung auf dieser Website erfolgt durch den Websitebetreiber. Dessen Kontaktdaten können Sie dem Abschnitt „Hinweis zur verantwortlichen Stelle" in dieser Datenschutzerklärung entnehmen.
+                    Die Datenverarbeitung auf dieser Website erfolgt durch den Websitebetreiber. Dessen Kontaktdaten können Sie dem Abschnitt &quot;Hinweis zur verantwortlichen Stelle&quot; in dieser Datenschutzerklärung entnehmen.
                   </p>
 
                   <p className="text-gray-700 leading-relaxed font-semibold mt-4">
@@ -129,7 +129,7 @@ export default function DatenschutzPage() {
 
                   <h3 className="text-2xl font-semibold text-[#712E2E] mt-6">SSL- bzw. TLS-Verschlüsselung</h3>
                   <p className="text-gray-700 leading-relaxed">
-                    Diese Seite nutzt aus Sicherheitsgründen und zum Schutz der Übertragung vertraulicher Inhalte, wie zum Beispiel Bestellungen oder Anfragen, die Sie an uns als Seitenbetreiber senden, eine SSL- bzw. TLS-Verschlüsselung. Eine verschlüsselte Verbindung erkennen Sie daran, dass die Adresszeile des Browsers von „http://" auf „https://" wechselt und an dem Schloss-Symbol in Ihrer Browserzeile.
+                    Diese Seite nutzt aus Sicherheitsgründen und zum Schutz der Übertragung vertraulicher Inhalte, wie zum Beispiel Bestellungen oder Anfragen, die Sie an uns als Seitenbetreiber senden, eine SSL- bzw. TLS-Verschlüsselung. Eine verschlüsselte Verbindung erkennen Sie daran, dass die Adresszeile des Browsers von &quot;http://&quot; auf &quot;https://&quot; wechselt und an dem Schloss-Symbol in Ihrer Browserzeile.
                   </p>
                 </div>
               </div>
@@ -143,7 +143,7 @@ export default function DatenschutzPage() {
                 <div className="space-y-4">
                   <h3 className="text-2xl font-semibold text-[#712E2E] mt-6">Cookies</h3>
                   <p className="text-gray-700 leading-relaxed">
-                    Unsere Internetseiten verwenden so genannte „Cookies". Cookies sind kleine Datenpakete und richten auf Ihrem Endgerät keinen Schaden an. Sie werden entweder vorübergehend für die Dauer einer Sitzung (Session-Cookies) oder dauerhaft (permanente Cookies) auf Ihrem Endgerät gespeichert.
+                    Unsere Internetseiten verwenden so genannte &quot;Cookies&quot;. Cookies sind kleine Datenpakete und richten auf Ihrem Endgerät keinen Schaden an. Sie werden entweder vorübergehend für die Dauer einer Sitzung (Session-Cookies) oder dauerhaft (permanente Cookies) auf Ihrem Endgerät gespeichert.
                   </p>
 
                   <h3 className="text-2xl font-semibold text-[#712E2E] mt-6">Server-Log-Dateien</h3>
