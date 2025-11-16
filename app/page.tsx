@@ -8,7 +8,7 @@ export default function HomePage() {
       {/* Hero Section - Groß und dominant */}
       <section className="relative min-h-screen flex items-center justify-center overflow-hidden bg-gradient-to-br from-[#4D1F1F] via-[#5A2525] to-[#712E2E]">
         <Image
-          src="/img_4058.webp"
+          src="/hero.png"
           alt="Entrümpler-Gorillas Team"
           fill
           className="object-cover opacity-30"
@@ -29,11 +29,11 @@ export default function HomePage() {
           </div>
 
           <h1 className="text-3xl sm:text-4xl md:text-6xl lg:text-7xl font-bold mb-6 md:mb-8 text-white drop-shadow-2xl leading-tight break-words">
-            Professionelle<br />Haushaltsauflösungen
+            Professionelle<br />Haushaltsauflösungen in<br />Ehingen (Donau)
           </h1>
           <p className="text-lg sm:text-xl md:text-2xl max-w-4xl mx-auto leading-relaxed mb-8 md:mb-12 text-white/95 drop-shadow-lg break-words px-2">
             Ihr vertrauenswürdiger Partner für Entrümpelungen, Second-Hand-Services und Sondertransporte
-            in Ehingen und Umgebung.
+            in Ehingen (Donau), Ulm und dem gesamten Alb-Donau-Kreis.
           </p>
           <div className="flex flex-col sm:flex-row gap-6 justify-center items-center">
             <a
@@ -102,7 +102,7 @@ export default function HomePage() {
             <Card className="group overflow-hidden border-2 border-[#4D1F1F]/10 shadow-xl hover:shadow-2xl hover:border-[#4D1F1F]/30 transition-all duration-500 hover:-translate-y-4 bg-white">
               <div className="relative h-80 w-full overflow-hidden">
                 <Image
-                  src="/secon.webp"
+                  src="/secon.png"
                   alt="Second Hand An- und Verkauf"
                   fill
                   className="object-cover transition-transform duration-700 group-hover:scale-110"
@@ -126,7 +126,7 @@ export default function HomePage() {
             <Card className="group overflow-hidden border-2 border-[#4D1F1F]/10 shadow-xl hover:shadow-2xl hover:border-[#4D1F1F]/30 transition-all duration-500 hover:-translate-y-4 bg-white">
               <div className="relative h-80 w-full overflow-hidden">
                 <Image
-                  src="/sonderfahrten.webp"
+                  src="/sonderfahrten.png"
                   alt="Sonderfahrten / Kurierfahrten"
                   fill
                   className="object-cover transition-transform duration-700 group-hover:scale-110"
@@ -154,10 +154,10 @@ export default function HomePage() {
       <section className="py-24 md:py-32 bg-gradient-to-br from-gray-50 to-white">
         <div className="container max-w-5xl mx-auto px-4">
           <div className="text-center mb-20">
-            <h2 className="text-4xl md:text-6xl font-bold mb-8 bg-gradient-to-r from-[#4D1F1F] to-[#712E2E] bg-clip-text text-transparent">
+            <h2 className="text-3xl sm:text-4xl md:text-6xl font-bold mb-8 bg-gradient-to-r from-[#4D1F1F] to-[#712E2E] bg-clip-text text-transparent px-4">
               Häufig gestellte Fragen
             </h2>
-            <p className="text-xl text-gray-700 max-w-3xl mx-auto leading-relaxed">
+            <p className="text-lg sm:text-xl text-gray-700 max-w-3xl mx-auto leading-relaxed px-4">
               Antworten auf die wichtigsten Fragen rund um unsere Services und Abläufe.
             </p>
           </div>
@@ -211,7 +211,8 @@ export default function HomePage() {
               Unser Standort
             </h2>
             <p className="text-xl text-white/90 max-w-3xl mx-auto leading-relaxed">
-              Besuchen Sie uns in Ehingen oder kontaktieren Sie uns für eine persönliche Beratung.
+              Besuchen Sie uns in Ehingen (Donau) oder kontaktieren Sie uns für eine persönliche Beratung.
+              Wir sind Ihr lokaler Partner im Alb-Donau-Kreis.
             </p>
           </div>
 
@@ -222,11 +223,11 @@ export default function HomePage() {
                 <div className="space-y-4 text-lg text-gray-800">
                   <div className="flex items-center justify-center space-x-3">
                     <div className="w-2 h-2 bg-[#4D1F1F] rounded-full"></div>
-                    <span className="font-semibold">Hauptstraße 46</span>
+                    <span className="font-semibold">Kornhausgasse 3</span>
                   </div>
                   <div className="flex items-center justify-center space-x-3">
                     <div className="w-2 h-2 bg-[#712E2E] rounded-full"></div>
-                    <span>89584 Ehingen</span>
+                    <span>89584 Ehingen (Donau)</span>
                   </div>
                   <div className="flex items-center justify-center space-x-3">
                     <div className="w-2 h-2 bg-[#4D1F1F] rounded-full"></div>

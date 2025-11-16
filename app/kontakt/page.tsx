@@ -69,8 +69,8 @@ export default function KontaktPage() {
                   <div>
                     <h3 className="font-bold text-lg text-gray-900 mb-2">Adresse</h3>
                     <p className="text-gray-700">
-                      Hauptstraße 46<br />
-                      89584 Ehingen<br />
+                      Kornhausgasse 3<br />
+                      89584 Ehingen (Donau)<br />
                       Baden-Württemberg
                     </p>
                   </div>

@@ -24,9 +24,9 @@ export default function ImpressumPage() {
               </h2>
               <div className="space-y-2 text-gray-700 leading-relaxed">
                 <p className="font-semibold text-xl text-[#4D1F1F]">Entrümpler-Gorillas</p>
-                <p>Inhaber: [Name des Inhabers]</p>
-                <p>Hauptstraße 46</p>
-                <p>89584 Ehingen</p>
+                <p>Inhaber: Gemizoglou & Soukouldanos GbR</p>
+                <p>Kornhausgasse 3</p>
+                <p>89584 Ehingen (Donau)</p>
                 <p>Deutschland</p>
               </div>
             </div>

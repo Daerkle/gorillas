@@ -110,9 +110,9 @@ export default function DatenschutzPage() {
                   </p>
                   <div className="bg-gray-50 p-4 rounded-lg border border-[#4D1F1F]/10 mt-2">
                     <p className="font-semibold">Entrümpler-Gorillas</p>
-                    <p>Inhaber: [Name des Inhabers]</p>
-                    <p>Hauptstraße 46</p>
-                    <p>89584 Ehingen</p>
+                    <p>Inhaber: Gemizoglou & Soukouldanos GbR</p>
+                    <p>Kornhausgasse 3</p>
+                    <p>89584 Ehingen (Donau)</p>
                     <p className="mt-2">Telefon: 0162 1511113</p>
                     <p>E-Mail: entruempler-gorillas@web.de</p>
                   </div>

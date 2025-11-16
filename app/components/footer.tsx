@@ -32,7 +32,7 @@ export function Footer() {
             </div>
             <p className="text-white/90 leading-relaxed">
               Professionelle Haushaltsauflösungen, Entrümpelungen und Second-Hand-Services
-              in Ehingen und Umgebung. Vertrauen Sie auf unsere Erfahrung.
+              in Ehingen (Donau) und Umgebung. Vertrauen Sie auf unsere Erfahrung.
             </p>
           </div>
 
@@ -45,8 +45,8 @@ export function Footer() {
                 <div className="text-white/90">
                   <p className="font-semibold">Adresse</p>
                   <p className="text-sm">
-                    Hauptstraße 46<br />
-                    89584 Ehingen
+                    Kornhausgasse 3<br />
+                    89584 Ehingen (Donau)
                   </p>
                 </div>
               </div>
