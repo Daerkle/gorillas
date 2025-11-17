@@ -15,6 +15,15 @@ export function Navigation() {
     { href: "/exklusive-dienstleistung", label: "Exklusive Dienstleistung" },
   ]
 
+  const openCalendly = (e: React.MouseEvent<HTMLAnchorElement>) => {
+    e.preventDefault()
+    if (typeof window !== 'undefined' && (window as any).Calendly) {
+      (window as any).Calendly.initPopupWidget({
+        url: 'https://calendly.com/entruempler-gorllias-info/30min'
+      })
+    }
+  }
+
   return (
     <nav className="fixed top-0 w-full z-50 bg-gradient-to-r from-[#4D1F1F] via-[#5A2525] to-[#712E2E] shadow-lg">
       <div className="container mx-auto px-4">
@@ -31,6 +40,13 @@ export function Navigation() {
                 <span className="absolute bottom-0 left-0 w-0 h-0.5 bg-white transition-all duration-300 group-hover:w-full"></span>
               </Link>
             ))}
+            <a
+              href="#"
+              onClick={openCalendly}
+              className="relative px-5 py-2 bg-white text-[#4D1F1F] hover:bg-white/90 transition-all duration-300 font-bold text-sm uppercase tracking-wider rounded-lg ml-2 shadow-lg hover:shadow-xl hover:scale-105"
+            >
+              Termin buchen
+            </a>
           </div>
 
           {/* Mobile Menu Button - Hamburger with X animation */}
@@ -59,6 +75,16 @@ export function Navigation() {
                   {item.label}
                 </Link>
               ))}
+              <a
+                href="#"
+                onClick={(e) => {
+                  openCalendly(e)
+                  setIsOpen(false)
+                }}
+                className="block px-4 py-3 text-base font-bold bg-white text-[#4D1F1F] hover:bg-white/90 rounded-lg transition-all duration-300 text-center shadow-lg"
+              >
+                Termin buchen
+              </a>
             </div>
           </div>
         )}

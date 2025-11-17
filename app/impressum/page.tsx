@@ -37,7 +37,8 @@ export default function ImpressumPage() {
                 Kontakt
               </h2>
               <div className="space-y-2 text-gray-700 leading-relaxed">
-                <p><span className="font-semibold">Telefon:</span> <a href="tel:01621511113" className="text-[#4D1F1F] hover:text-[#712E2E] transition-colors">0162 1511113</a></p>
+                <p><span className="font-semibold">Achilleas Gemizoglou:</span> <a href="tel:01621511113" className="text-[#4D1F1F] hover:text-[#712E2E] transition-colors">0162 1511113</a></p>
+                <p><span className="font-semibold">Eleftherios Soukouldanos:</span> <a href="tel:01727873085" className="text-[#4D1F1F] hover:text-[#712E2E] transition-colors">0172 7873085</a></p>
                 <p><span className="font-semibold">E-Mail:</span> <a href="mailto:entruempler-gorillas@web.de" className="text-[#4D1F1F] hover:text-[#712E2E] transition-colors">entruempler-gorillas@web.de</a></p>
               </div>
             </div>
@@ -53,16 +54,6 @@ export default function ImpressumPage() {
               </div>
             </div>
 
-            {/* Aufsichtsbehörde */}
-            <div className="space-y-4">
-              <h2 className="text-3xl font-bold text-[#4D1F1F] border-b-2 border-[#4D1F1F]/20 pb-3">
-                Aufsichtsbehörde
-              </h2>
-              <div className="space-y-2 text-gray-700 leading-relaxed">
-                <p>[Zuständige Behörde, falls zutreffend]</p>
-              </div>
-            </div>
-
             {/* Berufsbezeichnung */}
             <div className="space-y-4">
               <h2 className="text-3xl font-bold text-[#4D1F1F] border-b-2 border-[#4D1F1F]/20 pb-3">
@@ -70,7 +61,6 @@ export default function ImpressumPage() {
               </h2>
               <div className="space-y-2 text-gray-700 leading-relaxed">
                 <p><span className="font-semibold">Berufsbezeichnung:</span> Entrümpelungsdienstleistungen</p>
-                <p><span className="font-semibold">Zuständige Kammer:</span> [Falls zutreffend]</p>
               </div>
             </div>
 

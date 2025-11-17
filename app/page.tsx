@@ -1,8 +1,19 @@
+'use client'
+
 import Image from "next/image"
 import { Card, CardContent, CardDescription, CardHeader, CardTitle } from "@/components/ui/card"
 import { Accordion, AccordionContent, AccordionItem, AccordionTrigger } from "@/components/ui/accordion"
+import { Calendar, Star, Quote } from "lucide-react"
 
 export default function HomePage() {
+  const openCalendly = () => {
+    if (typeof window !== 'undefined' && (window as any).Calendly) {
+      (window as any).Calendly.initPopupWidget({
+        url: 'https://calendly.com/entruempler-gorllias-info/30min'
+      })
+    }
+  }
+
   return (
     <div className="flex flex-col min-h-screen">
       {/* Hero Section - Groß und dominant */}
@@ -35,16 +46,17 @@ export default function HomePage() {
             Ihr vertrauenswürdiger Partner für Entrümpelungen, Second-Hand-Services und Sondertransporte
             in Ehingen (Donau), Ulm und dem gesamten Alb-Donau-Kreis.
           </p>
-          <div className="flex flex-col sm:flex-row gap-6 justify-center items-center">
-            <a
-              href="/kontakt"
-              className="bg-white hover:bg-white/90 text-[#4D1F1F] px-10 py-4 rounded-full text-xl font-bold transition-all duration-300 transform hover:scale-105 shadow-2xl hover:shadow-white/50"
+          <div className="flex flex-col sm:flex-row gap-4 sm:gap-6 justify-center items-center">
+            <button
+              onClick={openCalendly}
+              className="bg-white hover:bg-white/90 text-[#4D1F1F] px-8 sm:px-10 py-4 rounded-full text-lg sm:text-xl font-bold transition-all duration-300 transform hover:scale-105 shadow-2xl hover:shadow-white/50 flex items-center gap-3"
             >
-              Kontakt aufnehmen
-            </a>
+              <Calendar size={24} />
+              Kostenlose Beratung buchen
+            </button>
             <a
               href="/services"
-              className="border-2 border-white hover:border-white text-white px-10 py-4 rounded-full text-xl font-bold transition-all duration-300 hover:bg-white/20 backdrop-blur-sm shadow-xl"
+              className="border-2 border-white hover:border-white text-white px-8 sm:px-10 py-4 rounded-full text-lg sm:text-xl font-bold transition-all duration-300 hover:bg-white/20 backdrop-blur-sm shadow-xl"
             >
               Unsere Services
             </a>
@@ -146,6 +158,153 @@ export default function HomePage() {
                 </CardDescription>
               </CardContent>
             </Card>
+          </div>
+        </div>
+      </section>
+
+      {/* Reviews Section - Google Bewertungen */}
+      <section className="py-24 md:py-32 bg-gradient-to-br from-[#4D1F1F] via-[#5A2525] to-[#712E2E] text-white relative overflow-hidden">
+        <div className="absolute inset-0 opacity-10">
+          <div className="absolute top-0 left-0 w-96 h-96 bg-white rounded-full mix-blend-multiply filter blur-3xl animate-pulse"></div>
+          <div className="absolute bottom-0 right-0 w-96 h-96 bg-[#712E2E] rounded-full mix-blend-multiply filter blur-3xl animate-pulse"></div>
+        </div>
+
+        <div className="container max-w-7xl mx-auto px-4 relative">
+          <div className="text-center mb-16">
+            <h2 className="text-4xl md:text-6xl font-bold mb-6 text-white">
+              Das sagen unsere Kunden
+            </h2>
+            <div className="flex items-center justify-center gap-2 mb-4">
+              {[...Array(5)].map((_, i) => (
+                <Star key={i} className="w-8 h-8 fill-yellow-400 text-yellow-400" />
+              ))}
+            </div>
+            <p className="text-xl text-white/90">
+              5.0 Sterne aus 7 Google-Bewertungen
+            </p>
+          </div>
+
+          <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
+            {/* Review 1 - Steffen Göttle */}
+            <div className="bg-white/95 backdrop-blur-sm p-8 rounded-2xl shadow-xl hover:shadow-2xl transition-all duration-300 hover:-translate-y-2">
+              <div className="flex items-center gap-1 mb-4">
+                {[...Array(5)].map((_, i) => (
+                  <Star key={i} className="w-5 h-5 fill-yellow-400 text-yellow-400" />
+                ))}
+              </div>
+              <Quote className="w-10 h-10 text-[#4D1F1F]/20 mb-4" />
+              <p className="text-gray-700 mb-6 leading-relaxed">
+                Ich bin mehr als zufrieden! Es war eine unglaublich gute und angenehme Erfahrung.
+                Was die Jungs hier aufbauen und bereits aufgebaut haben, ist wirklich beeindruckend...
+              </p>
+              <div className="border-t border-gray-200 pt-4">
+                <p className="font-bold text-[#4D1F1F]">Steffen Göttle</p>
+                <p className="text-sm text-gray-500">vor einem Monat · Google</p>
+              </div>
+            </div>
+
+            {/* Review 2 - Peter Pöschl */}
+            <div className="bg-white/95 backdrop-blur-sm p-8 rounded-2xl shadow-xl hover:shadow-2xl transition-all duration-300 hover:-translate-y-2">
+              <div className="flex items-center gap-1 mb-4">
+                {[...Array(5)].map((_, i) => (
+                  <Star key={i} className="w-5 h-5 fill-yellow-400 text-yellow-400" />
+                ))}
+              </div>
+              <Quote className="w-10 h-10 text-[#4D1F1F]/20 mb-4" />
+              <p className="text-gray-700 mb-6 leading-relaxed">
+                Starke Worte Starkes Team top Arbeit extrem sauber super nette Leute haben unseren
+                Umzug am 30.08. zur vollsten Zufriedenheit durchgeführt sehr zu empfehlen
+              </p>
+              <div className="border-t border-gray-200 pt-4">
+                <p className="font-bold text-[#4D1F1F]">Peter Pöschl</p>
+                <p className="text-sm text-gray-500">vor 2 Monaten · Google</p>
+              </div>
+            </div>
+
+            {/* Review 3 - R. B. */}
+            <div className="bg-white/95 backdrop-blur-sm p-8 rounded-2xl shadow-xl hover:shadow-2xl transition-all duration-300 hover:-translate-y-2">
+              <div className="flex items-center gap-1 mb-4">
+                {[...Array(5)].map((_, i) => (
+                  <Star key={i} className="w-5 h-5 fill-yellow-400 text-yellow-400" />
+                ))}
+              </div>
+              <Quote className="w-10 h-10 text-[#4D1F1F]/20 mb-4" />
+              <p className="text-gray-700 mb-6 leading-relaxed">
+                Kann die Firma nur empfehlen. Sie arbeiten sauber sind sehr freundlich und arbeiten
+                schnell und gut. Kann man nur empfehlen. Das werde ich auch machen.
+              </p>
+              <div className="border-t border-gray-200 pt-4">
+                <p className="font-bold text-[#4D1F1F]">R. B.</p>
+                <p className="text-sm text-gray-500">vor 2 Monaten · Google</p>
+              </div>
+            </div>
+
+            {/* Review 4 - Nicole Schacher */}
+            <div className="bg-white/95 backdrop-blur-sm p-8 rounded-2xl shadow-xl hover:shadow-2xl transition-all duration-300 hover:-translate-y-2">
+              <div className="flex items-center gap-1 mb-4">
+                {[...Array(5)].map((_, i) => (
+                  <Star key={i} className="w-5 h-5 fill-yellow-400 text-yellow-400" />
+                ))}
+              </div>
+              <Quote className="w-10 h-10 text-[#4D1F1F]/20 mb-4" />
+              <p className="text-gray-700 mb-6 leading-relaxed">
+                Tolles Team, super fleißig, gründlich, genau und sorgfältig. Absolut zu empfehlen.
+                Danke für den tollen Service am 20.09.2025.
+              </p>
+              <div className="border-t border-gray-200 pt-4">
+                <p className="font-bold text-[#4D1F1F]">Nicole Schacher</p>
+                <p className="text-sm text-gray-500">vor einem Monat · Google</p>
+              </div>
+            </div>
+
+            {/* Review 5 - Muddy Head */}
+            <div className="bg-white/95 backdrop-blur-sm p-8 rounded-2xl shadow-xl hover:shadow-2xl transition-all duration-300 hover:-translate-y-2">
+              <div className="flex items-center gap-1 mb-4">
+                {[...Array(5)].map((_, i) => (
+                  <Star key={i} className="w-5 h-5 fill-yellow-400 text-yellow-400" />
+                ))}
+              </div>
+              <Quote className="w-10 h-10 text-[#4D1F1F]/20 mb-4" />
+              <p className="text-gray-700 mb-6 leading-relaxed">
+                Uneingeschränkte Empfehlung - Die Jungs konnten recht kurzfristig eine 2 Zimmer
+                &quot;Rumpelkammer&quot; binnen 3 Stunden besenrein freiräumen - und das zu einem fairen Preis
+              </p>
+              <div className="border-t border-gray-200 pt-4">
+                <p className="font-bold text-[#4D1F1F]">Muddy Head</p>
+                <p className="text-sm text-gray-500">vor 2 Monaten · Google</p>
+              </div>
+            </div>
+
+            {/* Review 6 - Jay Dee */}
+            <div className="bg-white/95 backdrop-blur-sm p-8 rounded-2xl shadow-xl hover:shadow-2xl transition-all duration-300 hover:-translate-y-2">
+              <div className="flex items-center gap-1 mb-4">
+                {[...Array(5)].map((_, i) => (
+                  <Star key={i} className="w-5 h-5 fill-yellow-400 text-yellow-400" />
+                ))}
+              </div>
+              <Quote className="w-10 h-10 text-[#4D1F1F]/20 mb-4" />
+              <p className="text-gray-700 mb-6 leading-relaxed">
+                ⭐️⭐️⭐️⭐️⭐️ Absolut empfehlenswert! Professioneller Service mit viel Erfahrung
+                und Kompetenz.
+              </p>
+              <div className="border-t border-gray-200 pt-4">
+                <p className="font-bold text-[#4D1F1F]">Jay Dee</p>
+                <p className="text-sm text-gray-500">vor 9 Monaten · Google</p>
+              </div>
+            </div>
+          </div>
+
+          {/* Google Link */}
+          <div className="text-center mt-12">
+            <a
+              href="https://www.google.com/search?sca_esv=052283a6d4230c4d&sxsrf=AE3TifPk1aDaVVc47OlL0iMwQCvLKi5TYQ:1763408470251&si=AMgyJEtREmoPL4P1I5IDCfuA8gybfVI2d5Uj7QMwYCZHKDZ-E4CViIxDCyzBIHRSUvffQm6m4z7_bEqYLDrKs2zhjCwvHnVe9PSZpOsoKR_kLjNUbMLEkId7omI22aaTTTp1lmJ2GZqQBK-DN3d3jVmTDnAl2P7X5A%3D%3D&q=Entr%C3%BCmpler-Gorillas+Rezensionen&sa=X&ved=2ahUKEwipi9q7-PmQAxVelGoFHU51Ib8Q0bkNegQIIBAE&biw=2560&bih=1243&dpr=2"
+              target="_blank"
+              rel="noopener noreferrer"
+              className="inline-flex items-center gap-3 bg-white text-[#4D1F1F] px-8 py-4 rounded-full font-bold text-lg hover:bg-white/90 transition-all duration-300 shadow-xl hover:shadow-2xl hover:scale-105"
+            >
+              <Star className="w-6 h-6 fill-yellow-400 text-yellow-400" />
+              Mehr Bewertungen auf Google
+            </a>
           </div>
         </div>
       </section>
