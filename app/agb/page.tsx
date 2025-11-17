@@ -31,7 +31,7 @@ export default function AGBPage() {
                 § 1 Geltungsbereich
               </h2>
               <div className="space-y-3 text-gray-700 leading-relaxed">
-                <p>(1) Diese Allgemeinen Geschäftsbedingungen (nachfolgend "AGB") gelten für alle Verträge zwischen Entrümpler-Gorillas (nachfolgend "Auftragnehmer") und dem Auftraggeber über Entrümpelungs-, Haushaltsauflösungs-, Transport- und damit zusammenhängende Dienstleistungen.</p>
+                <p>(1) Diese Allgemeinen Geschäftsbedingungen (nachfolgend &quot;AGB&quot;) gelten für alle Verträge zwischen Entrümpler-Gorillas (nachfolgend &quot;Auftragnehmer&quot;) und dem Auftraggeber über Entrümpelungs-, Haushaltsauflösungs-, Transport- und damit zusammenhängende Dienstleistungen.</p>
                 <p>(2) Abweichende Bedingungen des Auftraggebers werden nicht anerkannt, es sei denn, der Auftragnehmer stimmt ihrer Geltung ausdrücklich schriftlich zu.</p>
                 <p>(3) Diese AGB gelten auch für alle künftigen Geschäftsbeziehungen, auch wenn sie nicht nochmals ausdrücklich vereinbart werden.</p>
               </div>
