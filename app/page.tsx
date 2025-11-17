@@ -236,17 +236,30 @@ export default function HomePage() {
                 </div>
               </div>
 
-              <div className="grid grid-cols-1 sm:grid-cols-2 gap-6">
+              <div className="grid grid-cols-1 sm:grid-cols-2 gap-4">
                 <a
                   href="tel:01621511113"
-                  className="flex items-center justify-center space-x-3 bg-white/10 backdrop-blur-sm px-6 py-4 rounded-xl border-2 border-white/30 hover:bg-white hover:text-[#4D1F1F] transition-all duration-300 group shadow-lg"
+                  className="flex flex-col items-center justify-center bg-white/10 backdrop-blur-sm px-6 py-4 rounded-xl border-2 border-white/30 hover:bg-white hover:text-[#4D1F1F] transition-all duration-300 group shadow-lg"
                 >
-                  <div className="w-3 h-3 bg-green-400 rounded-full animate-pulse"></div>
+                  <div className="flex items-center space-x-2 mb-1">
+                    <div className="w-3 h-3 bg-green-400 rounded-full animate-pulse"></div>
+                    <span className="font-bold text-sm">Achilleas</span>
+                  </div>
                   <span className="font-semibold">0162 1511113</span>
                 </a>
                 <a
+                  href="tel:01727873085"
+                  className="flex flex-col items-center justify-center bg-white/10 backdrop-blur-sm px-6 py-4 rounded-xl border-2 border-white/30 hover:bg-white hover:text-[#4D1F1F] transition-all duration-300 group shadow-lg"
+                >
+                  <div className="flex items-center space-x-2 mb-1">
+                    <div className="w-3 h-3 bg-green-400 rounded-full animate-pulse"></div>
+                    <span className="font-bold text-sm">Eleftherios</span>
+                  </div>
+                  <span className="font-semibold">0172 7873085</span>
+                </a>
+                <a
                   href="mailto:entruempler-gorillas@web.de"
-                  className="flex items-center justify-center space-x-3 bg-white/10 backdrop-blur-sm px-6 py-4 rounded-xl border-2 border-white/30 hover:bg-white hover:text-[#4D1F1F] transition-all duration-300 group shadow-lg"
+                  className="flex items-center justify-center space-x-3 bg-white/10 backdrop-blur-sm px-6 py-4 rounded-xl border-2 border-white/30 hover:bg-white hover:text-[#4D1F1F] transition-all duration-300 group shadow-lg sm:col-span-2"
                 >
                   <div className="w-3 h-3 bg-blue-400 rounded-full animate-pulse"></div>
                   <span className="font-semibold">E-Mail senden</span>

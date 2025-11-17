@@ -76,7 +76,7 @@ export default function KontaktPage() {
                   </div>
                 </div>
 
-                {/* Phone */}
+                {/* Phone - Achilleas */}
                 <a
                   href="tel:01621511113"
                   className="flex items-start gap-4 p-6 bg-white rounded-xl border-2 border-[#4D1F1F]/10 shadow-lg hover:shadow-xl hover:border-[#4D1F1F]/30 transition-all duration-300 group"
@@ -85,9 +85,25 @@ export default function KontaktPage() {
                     <Phone className="w-6 h-6 text-white" />
                   </div>
                   <div>
-                    <h3 className="font-bold text-lg text-gray-900 mb-2">Telefon</h3>
+                    <h3 className="font-bold text-lg text-gray-900 mb-2">Achilleas Gemizoglou</h3>
                     <p className="text-gray-700 group-hover:text-[#4D1F1F] transition-colors text-xl font-semibold">
                       0162 1511113
+                    </p>
+                  </div>
+                </a>
+
+                {/* Phone - Eleftherios */}
+                <a
+                  href="tel:01727873085"
+                  className="flex items-start gap-4 p-6 bg-white rounded-xl border-2 border-[#4D1F1F]/10 shadow-lg hover:shadow-xl hover:border-[#4D1F1F]/30 transition-all duration-300 group"
+                >
+                  <div className="flex-shrink-0 w-12 h-12 bg-gradient-to-br from-[#4D1F1F] to-[#712E2E] rounded-xl flex items-center justify-center group-hover:scale-110 transition-transform">
+                    <Phone className="w-6 h-6 text-white" />
+                  </div>
+                  <div>
+                    <h3 className="font-bold text-lg text-gray-900 mb-2">Eleftherios Soukouldanos</h3>
+                    <p className="text-gray-700 group-hover:text-[#4D1F1F] transition-colors text-xl font-semibold">
+                      0172 7873085
                     </p>
                   </div>
                 </a>

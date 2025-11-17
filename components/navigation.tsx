@@ -11,6 +11,7 @@ export function Navigation() {
     { href: "/services", label: "Services" },
     { href: "/team", label: "Team" },
     { href: "/kontakt", label: "Kontakt" },
+    { href: "/agb", label: "AGB" },
     { href: "/exklusive-dienstleistung", label: "Exklusive Dienstleistung" },
   ]
 

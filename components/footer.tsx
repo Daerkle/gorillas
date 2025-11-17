@@ -57,8 +57,19 @@ export function Footer() {
               >
                 <Phone size={20} className="text-white group-hover:scale-110 transition-transform" />
                 <div className="text-white/90">
-                  <p className="font-semibold">Telefon</p>
+                  <p className="font-semibold">Achilleas Gemizoglou</p>
                   <p className="text-sm">0162 1511113</p>
+                </div>
+              </a>
+
+              <a
+                href="tel:01727873085"
+                className="flex items-center space-x-4 p-3 bg-white/10 backdrop-blur-sm rounded-lg border border-white/20 hover:bg-white/20 transition-all duration-300 group"
+              >
+                <Phone size={20} className="text-white group-hover:scale-110 transition-transform" />
+                <div className="text-white/90">
+                  <p className="font-semibold">Eleftherios Soukouldanos</p>
+                  <p className="text-sm">0172 7873085</p>
                 </div>
               </a>
 
