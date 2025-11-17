@@ -43,14 +43,13 @@ export default function ImpressumPage() {
               </div>
             </div>
 
-            {/* Umsatzsteuer-ID */}
+            {/* Steuernummer */}
             <div className="space-y-4">
               <h2 className="text-3xl font-bold text-[#4D1F1F] border-b-2 border-[#4D1F1F]/20 pb-3">
-                Umsatzsteuer-ID
+                Steuernummer
               </h2>
               <div className="space-y-2 text-gray-700 leading-relaxed">
-                <p>Umsatzsteuer-Identifikationsnummer gemäß § 27 a Umsatzsteuergesetz:</p>
-                <p className="font-semibold">[USt-IdNr. einfügen]</p>
+                <p className="font-semibold">58002/00462</p>
               </div>
             </div>
 
