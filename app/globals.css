@@ -117,6 +117,11 @@
   .shadow-3xl {
     box-shadow: 0 35px 60px -12px rgba(77, 31, 31, 0.3);
   }
+
+  .mask-linear-gradient {
+    mask-image: linear-gradient(to right, transparent, black 10%, black 90%, transparent);
+    -webkit-mask-image: linear-gradient(to right, transparent, black 10%, black 90%, transparent);
+  }
 }
 
 @keyframes float {
@@ -156,8 +161,18 @@
   }
 }
 
+@keyframes slow-zoom {
+  0% { transform: scale(1.05); }
+  50% { transform: scale(1.15); }
+  100% { transform: scale(1.05); }
+}
+
 .animate-slide-up {
   animation: slide-up 0.5s ease-out;
+}
+
+.animate-slow-zoom {
+  animation: slow-zoom 20s ease-in-out infinite;
 }
 
 /* Smooth scrolling for the entire page */

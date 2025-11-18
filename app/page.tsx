@@ -3,7 +3,9 @@
 import Image from "next/image"
 import { Card, CardContent, CardDescription, CardHeader, CardTitle } from "@/components/ui/card"
 import { Accordion, AccordionContent, AccordionItem, AccordionTrigger } from "@/components/ui/accordion"
-import { Calendar, Star, Quote } from "lucide-react"
+import { Calendar, Star, Quote, MapPin, Phone, Mail, ArrowRight } from "lucide-react"
+import { FadeIn } from "@/components/ui/fade-in"
+import { motion } from "framer-motion"
 
 export default function HomePage() {
   const openCalendly = () => {
@@ -15,430 +17,321 @@ export default function HomePage() {
   }
 
   return (
-    <div className="flex flex-col min-h-screen">
-      {/* Hero Section - Groß und dominant */}
-      <section className="relative min-h-screen flex items-center justify-center overflow-hidden bg-gradient-to-br from-[#4D1F1F] via-[#5A2525] to-[#712E2E]">
-        <Image
-          src="/hero.png"
-          alt="Entrümpler-Gorillas Team"
-          fill
-          className="object-cover opacity-30"
-          priority
-        />
-        <div className="absolute inset-0 bg-gradient-to-br from-black/70 via-black/50 to-transparent" />
-        <div className="relative z-10 text-center text-white px-6 md:px-4 max-w-6xl mx-auto py-12 md:py-0">
-          {/* Logo */}
-          <div className="flex justify-center animate-fade-in mb-8 md:mb-12">
-            <Image
-              src="/logo.png"
-              alt="Entrümpler-Gorillas Logo"
-              width={300}
-              height={120}
-              className="drop-shadow-2xl w-[250px] h-auto sm:w-[300px] md:w-[400px]"
-              priority
-            />
-          </div>
-
-          <h1 className="text-3xl sm:text-4xl md:text-6xl lg:text-7xl font-bold mb-6 md:mb-8 text-white drop-shadow-2xl leading-tight break-words">
-            Professionelle<br />Haushaltsauflösungen in<br />Ehingen (Donau)
-          </h1>
-          <p className="text-lg sm:text-xl md:text-2xl max-w-4xl mx-auto leading-relaxed mb-8 md:mb-12 text-white/95 drop-shadow-lg break-words px-2">
-            Ihr vertrauenswürdiger Partner für Entrümpelungen, Second-Hand-Services und Sondertransporte
-            in Ehingen (Donau), Ulm und dem gesamten Alb-Donau-Kreis.
-          </p>
-          <div className="flex flex-col sm:flex-row gap-4 sm:gap-6 justify-center items-center">
-            <button
-              onClick={openCalendly}
-              className="bg-white hover:bg-white/90 text-[#4D1F1F] px-8 sm:px-10 py-4 rounded-full text-lg sm:text-xl font-bold transition-all duration-300 transform hover:scale-105 shadow-2xl hover:shadow-white/50 flex items-center gap-3"
-            >
-              <Calendar size={24} />
-              Kostenlose Beratung buchen
-            </button>
-            <a
-              href="/services"
-              className="border-2 border-white hover:border-white text-white px-8 sm:px-10 py-4 rounded-full text-lg sm:text-xl font-bold transition-all duration-300 hover:bg-white/20 backdrop-blur-sm shadow-xl"
-            >
-              Unsere Services
-            </a>
-          </div>
+    <div className="flex flex-col min-h-screen overflow-hidden">
+      {/* Hero Section */}
+      <section className="relative min-h-[95vh] flex items-center justify-center overflow-hidden bg-[#4D1F1F]">
+        <div className="absolute inset-0 z-0">
+          <Image
+            src="/hero.png"
+            alt="Entrümpler-Gorillas Team"
+            fill
+            className="object-cover opacity-40 scale-105 animate-slow-zoom"
+            priority
+          />
+          <div className="absolute inset-0 bg-gradient-to-b from-black/60 via-black/40 to-[#4D1F1F]" />
         </div>
-      </section>
+        
+        <div className="relative z-10 container mx-auto px-4 text-center">
+          <motion.div
+            initial={{ opacity: 0, y: 30 }}
+            animate={{ opacity: 1, y: 0 }}
+            transition={{ duration: 0.8, ease: "easeOut" }}
+          >
+            <div className="flex justify-center mb-10">
+              <Image
+                src="/logo.png"
+                alt="Entrümpler-Gorillas Logo"
+                width={400}
+                height={120}
+                className="w-[280px] sm:w-[350px] md:w-[450px] h-auto drop-shadow-2xl"
+                priority
+              />
+            </div>
 
-      {/* Slogan Section - Clean und minimalistisch */}
-      <section className="py-24 bg-gradient-to-br from-gray-50 to-white">
-        <div className="container max-w-4xl mx-auto text-center px-4">
-          <h2 className="text-4xl md:text-6xl font-bold bg-gradient-to-r from-[#4D1F1F] to-[#712E2E] bg-clip-text text-transparent leading-tight">
-            Wir Entrümpeln, als wäre<br />Morgen schon Heute
-          </h2>
-        </div>
-      </section>
+            <h1 className="font-heading text-4xl sm:text-5xl md:text-7xl lg:text-8xl font-bold text-white mb-8 drop-shadow-2xl leading-tight">
+              Platz schaffen für<br />
+              <span className="text-transparent bg-clip-text bg-gradient-to-r from-white via-gray-200 to-gray-400">Neues</span>
+            </h1>
 
-      {/* Services Section - Modern grid */}
-      <section className="py-24 md:py-32 bg-white">
-        <div className="container max-w-7xl mx-auto px-4">
-          <div className="text-center mb-20">
-            <h2 className="text-4xl md:text-6xl font-bold mb-8 bg-gradient-to-r from-[#4D1F1F] to-[#712E2E] bg-clip-text text-transparent">
-              Unsere Dienstleistungen
-            </h2>
-            <p className="text-xl text-gray-700 max-w-3xl mx-auto leading-relaxed">
-              Von der kompletten Haushaltsauflösung bis zum nachhaltigen Second-Hand-Verkauf -
-              wir bieten Ihnen umfassende Services für jeden Bedarf.
+            <p className="text-lg sm:text-xl md:text-2xl text-gray-200 max-w-3xl mx-auto mb-12 leading-relaxed font-light">
+              Ihr Premium-Partner für Haushaltsauflösungen, Entrümpelungen und Sondertransporte in Ehingen, Ulm und Umgebung.
             </p>
+
+            <div className="flex flex-col sm:flex-row gap-6 justify-center items-center">
+              <button
+                onClick={openCalendly}
+                className="group bg-white hover:bg-gray-100 text-[#4D1F1F] px-8 py-4 rounded-full text-lg font-bold transition-all duration-300 shadow-[0_0_20px_rgba(255,255,255,0.3)] hover:shadow-[0_0_30px_rgba(255,255,255,0.5)] flex items-center gap-3 transform hover:-translate-y-1"
+              >
+                <Calendar className="w-5 h-5 group-hover:scale-110 transition-transform" />
+                Kostenlose Beratung
+              </button>
+              <a
+                href="/services"
+                className="group border-2 border-white/30 hover:border-white text-white px-8 py-4 rounded-full text-lg font-bold transition-all duration-300 hover:bg-white/10 backdrop-blur-sm flex items-center gap-3"
+              >
+                Unsere Services
+                <ArrowRight className="w-5 h-5 group-hover:translate-x-1 transition-transform" />
+              </a>
+            </div>
+          </motion.div>
+        </div>
+
+        {/* Scroll Indicator */}
+        <motion.div 
+          className="absolute bottom-10 left-1/2 -translate-x-1/2 text-white/50"
+          animate={{ y: [0, 10, 0] }}
+          transition={{ duration: 2, repeat: Infinity }}
+        >
+          <div className="w-6 h-10 border-2 border-white/30 rounded-full flex justify-center p-1">
+            <div className="w-1 h-2 bg-white/50 rounded-full" />
           </div>
+        </motion.div>
+      </section>
 
-          <div className="grid grid-cols-1 lg:grid-cols-3 gap-12">
-            <Card className="group overflow-hidden border-2 border-[#4D1F1F]/10 shadow-xl hover:shadow-2xl hover:border-[#4D1F1F]/30 transition-all duration-500 hover:-translate-y-4 bg-white">
-              <div className="relative h-80 w-full overflow-hidden">
-                <Image
-                  src="/aufloesung.webp"
-                  alt="Haushaltsauflösungen"
-                  fill
-                  className="object-cover transition-transform duration-700 group-hover:scale-110"
-                />
-                <div className="absolute inset-0 bg-gradient-to-t from-[#4D1F1F]/60 to-transparent" />
-              </div>
-              <CardHeader className="pb-6">
-                <CardTitle className="text-3xl text-[#4D1F1F] font-bold mb-4 text-center">
-                  Haushaltsauflösungen
-                </CardTitle>
-                <div className="w-20 h-1 bg-gradient-to-r from-[#4D1F1F] to-[#712E2E] rounded-full mx-auto"></div>
-              </CardHeader>
-              <CardContent className="px-8 pb-8">
-                <CardDescription className="text-lg leading-relaxed text-center text-gray-700">
-                  Professionelle Haus- und Wohnungsauflösungen für nachhaltige Entrümpelungen und Organisation,
-                  um Ihnen bei einem stressfreien Neuanfang zu helfen.
-                </CardDescription>
-              </CardContent>
-            </Card>
+      {/* Slogan Section */}
+      <section className="py-24 bg-white relative overflow-hidden">
+        <div className="absolute top-0 left-0 w-full h-px bg-gradient-to-r from-transparent via-black/10 to-transparent" />
+        <div className="container max-w-5xl mx-auto text-center px-4">
+          <FadeIn>
+            <h2 className="font-heading text-3xl md:text-5xl lg:text-6xl font-bold text-[#4D1F1F] leading-tight mb-6">
+              &quot;Wir entrümpeln, als wäre<br />
+              <span className="text-transparent bg-clip-text bg-gradient-to-r from-[#4D1F1F] to-[#8B3A3A]">Morgen schon Heute&quot;</span>
+            </h2>
+            <div className="w-24 h-1.5 bg-amber-400 mx-auto rounded-full mb-8" />
+            <p className="text-xl text-gray-600 leading-relaxed max-w-3xl mx-auto">
+              Schnell, diskret und besenrein. Wir kümmern uns um die Details, damit Sie sich auf das Wesentliche konzentrieren können.
+            </p>
+          </FadeIn>
+        </div>
+      </section>
 
-            <Card className="group overflow-hidden border-2 border-[#4D1F1F]/10 shadow-xl hover:shadow-2xl hover:border-[#4D1F1F]/30 transition-all duration-500 hover:-translate-y-4 bg-white">
-              <div className="relative h-80 w-full overflow-hidden">
-                <Image
-                  src="/secon.png"
-                  alt="Second Hand An- und Verkauf"
-                  fill
-                  className="object-cover transition-transform duration-700 group-hover:scale-110"
-                />
-                <div className="absolute inset-0 bg-gradient-to-t from-[#712E2E]/60 to-transparent" />
-              </div>
-              <CardHeader className="pb-6">
-                <CardTitle className="text-3xl text-[#4D1F1F] font-bold mb-4 text-center">
-                  Second Hand An- und Verkauf
-                </CardTitle>
-                <div className="w-20 h-1 bg-gradient-to-r from-[#712E2E] to-[#4D1F1F] rounded-full mx-auto"></div>
-              </CardHeader>
-              <CardContent className="px-8 pb-8">
-                <CardDescription className="text-lg leading-relaxed text-center text-gray-700">
-                  Nachhaltige Second Hand Lösung, mit Abholservice. Entspanntes Verkaufen von Gegenständen,
-                  während wir persönlich die Artikel bei Ihnen abholen.
-                </CardDescription>
-              </CardContent>
-            </Card>
+      {/* Services Section */}
+      <section className="py-24 md:py-32 bg-gray-50">
+        <div className="container max-w-7xl mx-auto px-4">
+          <FadeIn className="text-center mb-20">
+            <h2 className="font-heading text-4xl md:text-6xl font-bold text-[#4D1F1F] mb-6">
+              Unsere Expertise
+            </h2>
+            <p className="text-xl text-gray-600 max-w-3xl mx-auto">
+              Alles aus einer Hand – professionell und zuverlässig.
+            </p>
+          </FadeIn>
 
-            <Card className="group overflow-hidden border-2 border-[#4D1F1F]/10 shadow-xl hover:shadow-2xl hover:border-[#4D1F1F]/30 transition-all duration-500 hover:-translate-y-4 bg-white">
-              <div className="relative h-80 w-full overflow-hidden">
-                <Image
-                  src="/sonderfahrten.png"
-                  alt="Sonderfahrten / Kurierfahrten"
-                  fill
-                  className="object-cover transition-transform duration-700 group-hover:scale-110"
-                />
-                <div className="absolute inset-0 bg-gradient-to-t from-[#4D1F1F]/60 to-transparent" />
-              </div>
-              <CardHeader className="pb-6">
-                <CardTitle className="text-3xl text-[#4D1F1F] font-bold mb-4 text-center">
-                  Sonderfahrten / Kurierfahrten
-                </CardTitle>
-                <div className="w-20 h-1 bg-gradient-to-r from-[#4D1F1F] to-[#712E2E] rounded-full mx-auto"></div>
-              </CardHeader>
-              <CardContent className="px-8 pb-8">
-                <CardDescription className="text-lg leading-relaxed text-center text-gray-700">
-                  Schnelle Sonder- und Kurierfahrten. Zuverlässiger Transport für eilige Lieferungen,
-                  Sondergut und wichtige Sendungen mit flexiblem Service.
-                </CardDescription>
-              </CardContent>
-            </Card>
+          <div className="grid grid-cols-1 lg:grid-cols-3 gap-10">
+            {[
+              {
+                title: "Haushaltsauflösungen",
+                desc: "Komplette Auflösung von Wohnungen und Häusern mit Wertanrechnung. Diskret und besenrein.",
+                image: "/aufloesung.webp",
+                color: "from-[#4D1F1F] to-[#2D1212]"
+              },
+              {
+                title: "Second Hand & Ankauf",
+                desc: "Nachhaltigkeit steht an erster Stelle. Wir kaufen Verwertbares an und geben Dingen ein zweites Leben.",
+                image: "/secon.png",
+                color: "from-[#712E2E] to-[#4D1F1F]"
+              },
+              {
+                title: "Sonderfahrten",
+                desc: "Express-Kurierfahrten und Sonder-Transporte. Wenn es mal schnell gehen muss.",
+                image: "/sonderfahrten.png",
+                color: "from-[#4D1F1F] to-[#712E2E]"
+              }
+            ].map((service, idx) => (
+              <FadeIn key={idx} delay={idx * 0.2}>
+                <Card className="group h-full overflow-hidden border-none shadow-lg hover:shadow-2xl transition-all duration-500 hover:-translate-y-2 bg-white">
+                  <div className="relative h-72 w-full overflow-hidden">
+                    <Image
+                      src={service.image}
+                      alt={service.title}
+                      fill
+                      className="object-cover transition-transform duration-700 group-hover:scale-110"
+                    />
+                    <div className={`absolute inset-0 bg-gradient-to-t ${service.color} opacity-80 group-hover:opacity-70 transition-opacity duration-500`} />
+                    <div className="absolute bottom-0 left-0 p-8 text-white translate-y-4 group-hover:translate-y-0 transition-transform duration-500">
+                      <h3 className="font-heading text-2xl font-bold mb-2">{service.title}</h3>
+                      <div className="w-12 h-1 bg-amber-400 rounded-full group-hover:w-20 transition-all duration-500" />
+                    </div>
+                  </div>
+                  <CardContent className="p-8">
+                    <p className="text-gray-600 text-lg leading-relaxed">
+                      {service.desc}
+                    </p>
+                  </CardContent>
+                </Card>
+              </FadeIn>
+            ))}
           </div>
         </div>
       </section>
 
-      {/* Reviews Section - Google Bewertungen */}
-      <section className="py-24 md:py-32 bg-gradient-to-br from-[#4D1F1F] via-[#5A2525] to-[#712E2E] text-white relative overflow-hidden">
-        <div className="absolute inset-0 opacity-10">
-          <div className="absolute top-0 left-0 w-96 h-96 bg-white rounded-full mix-blend-multiply filter blur-3xl animate-pulse"></div>
-          <div className="absolute bottom-0 right-0 w-96 h-96 bg-[#712E2E] rounded-full mix-blend-multiply filter blur-3xl animate-pulse"></div>
+      {/* Reviews Section */}
+      <section className="py-24 md:py-32 bg-[#4D1F1F] relative overflow-hidden">
+        <div className="absolute inset-0 opacity-20">
+          <div className="absolute top-0 right-0 w-[600px] h-[600px] bg-[#8B3A3A] rounded-full mix-blend-screen filter blur-3xl animate-pulse" />
+          <div className="absolute bottom-0 left-0 w-[600px] h-[600px] bg-[#2D1212] rounded-full mix-blend-screen filter blur-3xl animate-pulse" />
         </div>
 
-        <div className="container max-w-7xl mx-auto px-4 relative">
-          <div className="text-center mb-16">
-            <h2 className="text-4xl md:text-6xl font-bold mb-6 text-white">
-              Das sagen unsere Kunden
+        <div className="container max-w-7xl mx-auto px-4 relative z-10">
+          <FadeIn className="text-center mb-20">
+            <h2 className="font-heading text-4xl md:text-6xl font-bold text-white mb-6">
+              Kundenstimmen
             </h2>
             <div className="flex items-center justify-center gap-2 mb-4">
               {[...Array(5)].map((_, i) => (
-                <Star key={i} className="w-8 h-8 fill-yellow-400 text-yellow-400" />
+                <Star key={i} className="w-6 h-6 fill-amber-400 text-amber-400" />
               ))}
             </div>
-            <p className="text-xl text-white/90">
-              5.0 Sterne aus 7 Google-Bewertungen
+            <p className="text-xl text-white/80">
+              Exzellenter Service bestätigt durch unsere Kunden
             </p>
+          </FadeIn>
+
+          <div className="relative w-full overflow-hidden mask-linear-gradient">
+            <motion.div 
+              className="flex gap-8 w-max px-4"
+              animate={{ x: "-50%" }}
+              transition={{ 
+                duration: 50, 
+                repeat: Infinity, 
+                ease: "linear" 
+              }}
+            >
+              {[
+                { name: "Steffen Göttle", text: "Ich bin mehr als zufrieden! Es war eine unglaublich gute und angenehme Erfahrung. Was die Jungs hier aufbauen ist beeindruckend." },
+                { name: "Peter Pöschl", text: "Starke Worte Starkes Team top Arbeit extrem sauber super nette Leute. Zur vollsten Zufriedenheit durchgeführt." },
+                { name: "Nicole Schacher", text: "Tolles Team, super fleißig, gründlich, genau und sorgfältig. Absolut zu empfehlen. Danke für den tollen Service." },
+                { name: "Muddy Head", text: "Uneingeschränkte Empfehlung - Die Jungs konnten recht kurzfristig eine 2 Zimmer \"Rumpelkammer\" binnen 3 Stunden besenrein freiräumen." },
+                { name: "Jay Dee", text: "⭐️⭐️⭐️⭐️⭐️ Absolut empfehlenswert! Professioneller Service mit viel Erfahrung und Kompetenz." },
+                { name: "Steffen Göttle", text: "Ich bin mehr als zufrieden! Es war eine unglaublich gute und angenehme Erfahrung. Was die Jungs hier aufbauen ist beeindruckend." },
+                { name: "Peter Pöschl", text: "Starke Worte Starkes Team top Arbeit extrem sauber super nette Leute. Zur vollsten Zufriedenheit durchgeführt." },
+                { name: "Nicole Schacher", text: "Tolles Team, super fleißig, gründlich, genau und sorgfältig. Absolut zu empfehlen. Danke für den tollen Service." },
+                { name: "Muddy Head", text: "Uneingeschränkte Empfehlung - Die Jungs konnten recht kurzfristig eine 2 Zimmer \"Rumpelkammer\" binnen 3 Stunden besenrein freiräumen." },
+                { name: "Jay Dee", text: "⭐️⭐️⭐️⭐️⭐️ Absolut empfehlenswert! Professioneller Service mit viel Erfahrung und Kompetenz." }
+              ].map((review, idx) => (
+                <div key={idx} className="w-[350px] md:w-[450px] shrink-0 bg-white/10 backdrop-blur-md border border-white/10 p-8 rounded-2xl hover:bg-white/15 transition-colors duration-300">
+                  <Quote className="w-8 h-8 text-amber-400/50 mb-4" />
+                  <p className="text-gray-100 text-lg mb-6 italic leading-relaxed">
+                    &quot;{review.text}&quot;
+                  </p>
+                  <div className="flex items-center gap-3">
+                    <div className="w-10 h-10 bg-amber-400 rounded-full flex items-center justify-center text-[#4D1F1F] font-bold text-lg">
+                      {review.name.charAt(0)}
+                    </div>
+                    <div>
+                      <p className="font-bold text-white">{review.name}</p>
+                      <p className="text-sm text-white/60">Google Bewertung</p>
+                    </div>
+                  </div>
+                </div>
+              ))}
+            </motion.div>
           </div>
 
-          <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
-            {/* Review 1 - Steffen Göttle */}
-            <div className="bg-white/95 backdrop-blur-sm p-8 rounded-2xl shadow-xl hover:shadow-2xl transition-all duration-300 hover:-translate-y-2">
-              <div className="flex items-center gap-1 mb-4">
-                {[...Array(5)].map((_, i) => (
-                  <Star key={i} className="w-5 h-5 fill-yellow-400 text-yellow-400" />
-                ))}
-              </div>
-              <Quote className="w-10 h-10 text-[#4D1F1F]/20 mb-4" />
-              <p className="text-gray-700 mb-6 leading-relaxed">
-                Ich bin mehr als zufrieden! Es war eine unglaublich gute und angenehme Erfahrung.
-                Was die Jungs hier aufbauen und bereits aufgebaut haben, ist wirklich beeindruckend...
-              </p>
-              <div className="border-t border-gray-200 pt-4">
-                <p className="font-bold text-[#4D1F1F]">Steffen Göttle</p>
-                <p className="text-sm text-gray-500">vor einem Monat · Google</p>
-              </div>
-            </div>
-
-            {/* Review 2 - Peter Pöschl */}
-            <div className="bg-white/95 backdrop-blur-sm p-8 rounded-2xl shadow-xl hover:shadow-2xl transition-all duration-300 hover:-translate-y-2">
-              <div className="flex items-center gap-1 mb-4">
-                {[...Array(5)].map((_, i) => (
-                  <Star key={i} className="w-5 h-5 fill-yellow-400 text-yellow-400" />
-                ))}
-              </div>
-              <Quote className="w-10 h-10 text-[#4D1F1F]/20 mb-4" />
-              <p className="text-gray-700 mb-6 leading-relaxed">
-                Starke Worte Starkes Team top Arbeit extrem sauber super nette Leute haben unseren
-                Umzug am 30.08. zur vollsten Zufriedenheit durchgeführt sehr zu empfehlen
-              </p>
-              <div className="border-t border-gray-200 pt-4">
-                <p className="font-bold text-[#4D1F1F]">Peter Pöschl</p>
-                <p className="text-sm text-gray-500">vor 2 Monaten · Google</p>
-              </div>
-            </div>
-
-            {/* Review 3 - R. B. */}
-            <div className="bg-white/95 backdrop-blur-sm p-8 rounded-2xl shadow-xl hover:shadow-2xl transition-all duration-300 hover:-translate-y-2">
-              <div className="flex items-center gap-1 mb-4">
-                {[...Array(5)].map((_, i) => (
-                  <Star key={i} className="w-5 h-5 fill-yellow-400 text-yellow-400" />
-                ))}
-              </div>
-              <Quote className="w-10 h-10 text-[#4D1F1F]/20 mb-4" />
-              <p className="text-gray-700 mb-6 leading-relaxed">
-                Kann die Firma nur empfehlen. Sie arbeiten sauber sind sehr freundlich und arbeiten
-                schnell und gut. Kann man nur empfehlen. Das werde ich auch machen.
-              </p>
-              <div className="border-t border-gray-200 pt-4">
-                <p className="font-bold text-[#4D1F1F]">R. B.</p>
-                <p className="text-sm text-gray-500">vor 2 Monaten · Google</p>
-              </div>
-            </div>
-
-            {/* Review 4 - Nicole Schacher */}
-            <div className="bg-white/95 backdrop-blur-sm p-8 rounded-2xl shadow-xl hover:shadow-2xl transition-all duration-300 hover:-translate-y-2">
-              <div className="flex items-center gap-1 mb-4">
-                {[...Array(5)].map((_, i) => (
-                  <Star key={i} className="w-5 h-5 fill-yellow-400 text-yellow-400" />
-                ))}
-              </div>
-              <Quote className="w-10 h-10 text-[#4D1F1F]/20 mb-4" />
-              <p className="text-gray-700 mb-6 leading-relaxed">
-                Tolles Team, super fleißig, gründlich, genau und sorgfältig. Absolut zu empfehlen.
-                Danke für den tollen Service am 20.09.2025.
-              </p>
-              <div className="border-t border-gray-200 pt-4">
-                <p className="font-bold text-[#4D1F1F]">Nicole Schacher</p>
-                <p className="text-sm text-gray-500">vor einem Monat · Google</p>
-              </div>
-            </div>
-
-            {/* Review 5 - Muddy Head */}
-            <div className="bg-white/95 backdrop-blur-sm p-8 rounded-2xl shadow-xl hover:shadow-2xl transition-all duration-300 hover:-translate-y-2">
-              <div className="flex items-center gap-1 mb-4">
-                {[...Array(5)].map((_, i) => (
-                  <Star key={i} className="w-5 h-5 fill-yellow-400 text-yellow-400" />
-                ))}
-              </div>
-              <Quote className="w-10 h-10 text-[#4D1F1F]/20 mb-4" />
-              <p className="text-gray-700 mb-6 leading-relaxed">
-                Uneingeschränkte Empfehlung - Die Jungs konnten recht kurzfristig eine 2 Zimmer
-                &quot;Rumpelkammer&quot; binnen 3 Stunden besenrein freiräumen - und das zu einem fairen Preis
-              </p>
-              <div className="border-t border-gray-200 pt-4">
-                <p className="font-bold text-[#4D1F1F]">Muddy Head</p>
-                <p className="text-sm text-gray-500">vor 2 Monaten · Google</p>
-              </div>
-            </div>
-
-            {/* Review 6 - Jay Dee */}
-            <div className="bg-white/95 backdrop-blur-sm p-8 rounded-2xl shadow-xl hover:shadow-2xl transition-all duration-300 hover:-translate-y-2">
-              <div className="flex items-center gap-1 mb-4">
-                {[...Array(5)].map((_, i) => (
-                  <Star key={i} className="w-5 h-5 fill-yellow-400 text-yellow-400" />
-                ))}
-              </div>
-              <Quote className="w-10 h-10 text-[#4D1F1F]/20 mb-4" />
-              <p className="text-gray-700 mb-6 leading-relaxed">
-                ⭐️⭐️⭐️⭐️⭐️ Absolut empfehlenswert! Professioneller Service mit viel Erfahrung
-                und Kompetenz.
-              </p>
-              <div className="border-t border-gray-200 pt-4">
-                <p className="font-bold text-[#4D1F1F]">Jay Dee</p>
-                <p className="text-sm text-gray-500">vor 9 Monaten · Google</p>
-              </div>
-            </div>
-          </div>
-
-          {/* Google Link */}
-          <div className="text-center mt-12">
+          <FadeIn className="text-center mt-16">
             <a
               href="https://www.google.com/search?sca_esv=052283a6d4230c4d&sxsrf=AE3TifPk1aDaVVc47OlL0iMwQCvLKi5TYQ:1763408470251&si=AMgyJEtREmoPL4P1I5IDCfuA8gybfVI2d5Uj7QMwYCZHKDZ-E4CViIxDCyzBIHRSUvffQm6m4z7_bEqYLDrKs2zhjCwvHnVe9PSZpOsoKR_kLjNUbMLEkId7omI22aaTTTp1lmJ2GZqQBK-DN3d3jVmTDnAl2P7X5A%3D%3D&q=Entr%C3%BCmpler-Gorillas+Rezensionen&sa=X&ved=2ahUKEwipi9q7-PmQAxVelGoFHU51Ib8Q0bkNegQIIBAE&biw=2560&bih=1243&dpr=2"
               target="_blank"
               rel="noopener noreferrer"
-              className="inline-flex items-center gap-3 bg-white text-[#4D1F1F] px-8 py-4 rounded-full font-bold text-lg hover:bg-white/90 transition-all duration-300 shadow-xl hover:shadow-2xl hover:scale-105"
+              className="inline-flex items-center gap-3 bg-amber-400 hover:bg-amber-500 text-[#4D1F1F] px-8 py-4 rounded-full font-bold text-lg transition-all duration-300 shadow-lg hover:shadow-xl transform hover:-translate-y-1"
             >
-              <Star className="w-6 h-6 fill-yellow-400 text-yellow-400" />
-              Mehr Bewertungen auf Google
+              <Star className="w-5 h-5 fill-[#4D1F1F] text-[#4D1F1F]" />
+              Alle Bewertungen auf Google
             </a>
-          </div>
+          </FadeIn>
         </div>
       </section>
 
-      {/* FAQ Section - Clean minimalistisch */}
-      <section className="py-24 md:py-32 bg-gradient-to-br from-gray-50 to-white">
-        <div className="container max-w-5xl mx-auto px-4">
-          <div className="text-center mb-20">
-            <h2 className="text-3xl sm:text-4xl md:text-6xl font-bold mb-8 bg-gradient-to-r from-[#4D1F1F] to-[#712E2E] bg-clip-text text-transparent px-4">
-              Häufig gestellte Fragen
+      {/* FAQ Section */}
+      <section className="py-24 bg-white">
+        <div className="container max-w-4xl mx-auto px-4">
+          <FadeIn className="text-center mb-16">
+            <h2 className="font-heading text-4xl md:text-5xl font-bold text-[#4D1F1F] mb-6">
+              Häufige Fragen
             </h2>
-            <p className="text-lg sm:text-xl text-gray-700 max-w-3xl mx-auto leading-relaxed px-4">
-              Antworten auf die wichtigsten Fragen rund um unsere Services und Abläufe.
-            </p>
-          </div>
+          </FadeIn>
 
-          <Accordion type="single" collapsible className="w-full space-y-6">
-            <AccordionItem value="item-1" className="border-2 border-[#4D1F1F]/10 bg-white rounded-2xl px-8 py-6 shadow-lg hover:shadow-xl hover:border-[#4D1F1F]/30 transition-all duration-300">
-              <AccordionTrigger className="text-left text-2xl font-semibold text-[#4D1F1F] hover:text-[#712E2E] py-6 hover:no-underline">
-                Wie lange dauert eine Angebotsanfrage?
-              </AccordionTrigger>
-              <AccordionContent className="text-lg text-gray-700 pb-6 leading-relaxed">
-                Das Angebot erfolgt in der Regel noch am selben Tag nach der Besichtigung.
-                Dieses wird elektronisch per E-mail übermittelt und ist für Sie völlig unverbindlich.
-              </AccordionContent>
-            </AccordionItem>
-
-            <AccordionItem value="item-2" className="border-2 border-[#4D1F1F]/10 bg-white rounded-2xl px-8 py-6 shadow-lg hover:shadow-xl hover:border-[#4D1F1F]/30 transition-all duration-300">
-              <AccordionTrigger className="text-left text-2xl font-semibold text-[#4D1F1F] hover:text-[#712E2E] py-6 hover:no-underline">
-                Wie schnell sind Sie verfügbar?
-              </AccordionTrigger>
-              <AccordionContent className="text-lg text-gray-700 pb-6 leading-relaxed">
-                Nach Terminvereinbarung können wir meist innerhalb weniger Tage mit der Arbeit beginnen.
-                In dringenden Fällen bemühen wir uns um schnellstmögliche Verfügbarkeit.
-              </AccordionContent>
-            </AccordionItem>
-
-            <AccordionItem value="item-3" className="border-2 border-[#4D1F1F]/10 bg-white rounded-2xl px-8 py-6 shadow-lg hover:shadow-xl hover:border-[#4D1F1F]/30 transition-all duration-300">
-              <AccordionTrigger className="text-left text-2xl font-semibold text-[#4D1F1F] hover:text-[#712E2E] py-6 hover:no-underline">
-                Können zusätzliche Kosten entstehen?
-              </AccordionTrigger>
-              <AccordionContent className="text-lg text-gray-700 pb-6 leading-relaxed">
-                Ja, bei nicht einsehbaren Werkstoffen die eine besondere Entsorgung benötigen.
-                Dies wird aber direkt nach Feststellung mit dem Auftraggeber besprochen vor Ort -
-                keine Überraschungen!
-              </AccordionContent>
-            </AccordionItem>
-          </Accordion>
+          <FadeIn>
+            <Accordion type="single" collapsible className="w-full space-y-4">
+              {[
+                { q: "Wie schnell bekomme ich ein Angebot?", a: "In der Regel erhalten Sie das unverbindliche Angebot noch am selben Tag nach der Besichtigung per E-Mail." },
+                { q: "Wie kurzfristig sind Sie verfügbar?", a: "Meist können wir innerhalb weniger Tage starten. In Notfällen versuchen wir, sofortige Lösungen zu finden." },
+                { q: "Gibt es versteckte Kosten?", a: "Nein. Wir arbeiten transparent. Sollten unvorhergesehene Sondermaterialien auftauchen, besprechen wir dies sofort vor Ort." },
+              ].map((item, idx) => (
+                <AccordionItem key={idx} value={`item-${idx}`} className="border border-gray-200 rounded-xl px-6 bg-gray-50/50 hover:bg-gray-50 transition-colors">
+                  <AccordionTrigger className="text-xl font-semibold text-[#4D1F1F] hover:no-underline py-6">
+                    {item.q}
+                  </AccordionTrigger>
+                  <AccordionContent className="text-lg text-gray-600 pb-6">
+                    {item.a}
+                  </AccordionContent>
+                </AccordionItem>
+              ))}
+            </Accordion>
+          </FadeIn>
         </div>
       </section>
 
-      {/* Location Section - Modern und prominent */}
-      <section className="py-24 md:py-32 bg-gradient-to-br from-[#4D1F1F] via-[#5A2525] to-[#712E2E] text-white relative overflow-hidden">
-        {/* Background decoration */}
-        <div className="absolute inset-0 opacity-10">
-          <div className="absolute top-0 left-0 w-96 h-96 bg-white rounded-full mix-blend-multiply filter blur-3xl animate-pulse"></div>
-          <div className="absolute bottom-0 right-0 w-96 h-96 bg-[#712E2E] rounded-full mix-blend-multiply filter blur-3xl animate-pulse animation-delay-2000"></div>
-        </div>
-
-        <div className="container max-w-6xl mx-auto px-4 relative">
-          <div className="text-center mb-16">
-            <h2 className="text-4xl md:text-6xl font-bold mb-8 text-white">
-              Unser Standort
-            </h2>
-            <p className="text-xl text-white/90 max-w-3xl mx-auto leading-relaxed">
-              Besuchen Sie uns in Ehingen (Donau) oder kontaktieren Sie uns für eine persönliche Beratung.
-              Wir sind Ihr lokaler Partner im Alb-Donau-Kreis.
-            </p>
-          </div>
-
-          <div className="grid grid-cols-1 lg:grid-cols-2 gap-16 items-center">
+      {/* Location & Contact */}
+      <section className="py-24 bg-[#2D1212] text-white relative">
+        <div className="container max-w-6xl mx-auto px-4">
+          <FadeIn className="grid grid-cols-1 lg:grid-cols-2 gap-16">
             <div className="space-y-8">
-              <div className="bg-white/95 backdrop-blur-sm p-8 rounded-2xl text-center border-2 border-white/30 shadow-2xl">
-                <h3 className="text-3xl font-bold text-[#4D1F1F] mb-6">Entrümpler-Gorillas</h3>
-                <div className="space-y-4 text-lg text-gray-800">
-                  <div className="flex items-center justify-center space-x-3">
-                    <div className="w-2 h-2 bg-[#4D1F1F] rounded-full"></div>
-                    <span className="font-semibold">Kornhausgasse 3</span>
+              <h2 className="font-heading text-4xl md:text-5xl font-bold text-white mb-2">
+                Kontaktieren Sie uns
+              </h2>
+              <p className="text-gray-300 text-xl mb-8">
+                Wir sind für Sie da – in Ehingen und im gesamten Alb-Donau-Kreis.
+              </p>
+
+              <div className="space-y-6">
+                <div className="flex items-start gap-4">
+                  <div className="w-12 h-12 bg-white/5 rounded-full flex items-center justify-center shrink-0">
+                    <MapPin className="w-6 h-6 text-amber-400" />
                   </div>
-                  <div className="flex items-center justify-center space-x-3">
-                    <div className="w-2 h-2 bg-[#712E2E] rounded-full"></div>
-                    <span>89584 Ehingen (Donau)</span>
+                  <div>
+                    <h3 className="font-bold text-lg mb-1">Standort</h3>
+                    <p className="text-gray-300">Kornhausgasse 3<br />89584 Ehingen (Donau)</p>
                   </div>
-                  <div className="flex items-center justify-center space-x-3">
-                    <div className="w-2 h-2 bg-[#4D1F1F] rounded-full"></div>
-                    <span>Baden-Württemberg, Deutschland</span>
+                </div>
+
+                <div className="flex items-start gap-4">
+                  <div className="w-12 h-12 bg-white/5 rounded-full flex items-center justify-center shrink-0">
+                    <Phone className="w-6 h-6 text-amber-400" />
+                  </div>
+                  <div className="space-y-2">
+                    <h3 className="font-bold text-lg mb-1">Telefon</h3>
+                    <a href="tel:01621511113" className="block text-gray-300 hover:text-amber-400 transition-colors">Achilleas: 0162 1511113</a>
+                    <a href="tel:01727873085" className="block text-gray-300 hover:text-amber-400 transition-colors">Eleftherios: 0172 7873085</a>
+                  </div>
+                </div>
+
+                <div className="flex items-start gap-4">
+                  <div className="w-12 h-12 bg-white/5 rounded-full flex items-center justify-center shrink-0">
+                    <Mail className="w-6 h-6 text-amber-400" />
+                  </div>
+                  <div>
+                    <h3 className="font-bold text-lg mb-1">E-Mail</h3>
+                    <a href="mailto:entruempler-gorillas@web.de" className="text-gray-300 hover:text-amber-400 transition-colors">
+                      entruempler-gorillas@web.de
+                    </a>
                   </div>
                 </div>
               </div>
-
-              <div className="grid grid-cols-1 sm:grid-cols-2 gap-4">
-                <a
-                  href="tel:01621511113"
-                  className="flex flex-col items-center justify-center bg-white/10 backdrop-blur-sm px-6 py-4 rounded-xl border-2 border-white/30 hover:bg-white hover:text-[#4D1F1F] transition-all duration-300 group shadow-lg"
-                >
-                  <div className="flex items-center space-x-2 mb-1">
-                    <div className="w-3 h-3 bg-green-400 rounded-full animate-pulse"></div>
-                    <span className="font-bold text-sm">Achilleas</span>
-                  </div>
-                  <span className="font-semibold">0162 1511113</span>
-                </a>
-                <a
-                  href="tel:01727873085"
-                  className="flex flex-col items-center justify-center bg-white/10 backdrop-blur-sm px-6 py-4 rounded-xl border-2 border-white/30 hover:bg-white hover:text-[#4D1F1F] transition-all duration-300 group shadow-lg"
-                >
-                  <div className="flex items-center space-x-2 mb-1">
-                    <div className="w-3 h-3 bg-green-400 rounded-full animate-pulse"></div>
-                    <span className="font-bold text-sm">Eleftherios</span>
-                  </div>
-                  <span className="font-semibold">0172 7873085</span>
-                </a>
-                <a
-                  href="mailto:entruempler-gorillas@web.de"
-                  className="flex items-center justify-center space-x-3 bg-white/10 backdrop-blur-sm px-6 py-4 rounded-xl border-2 border-white/30 hover:bg-white hover:text-[#4D1F1F] transition-all duration-300 group shadow-lg sm:col-span-2"
-                >
-                  <div className="w-3 h-3 bg-blue-400 rounded-full animate-pulse"></div>
-                  <span className="font-semibold">E-Mail senden</span>
-                </a>
-              </div>
             </div>
 
-            <div className="bg-white/95 backdrop-blur-sm p-4 rounded-2xl overflow-hidden shadow-2xl border-2 border-white/30">
+            <div className="bg-white/5 p-2 rounded-2xl shadow-2xl backdrop-blur-sm">
               <iframe
-                src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d2653.8!2d9.7280659!3d48.2841853!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x0%3A0x0!2zNDjCsDE3JzAzLjEiTiA5wrA0Myc0MS4wIkU!5e0!3m2!1sde!2sde!4v1234567890"
+                src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d2653.8!2d9.7280659!3d48.2841853!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x479a1d1155555555%3A0x5555555555555555!2sKornhausgasse%203%2C%2089584%20Ehingen%20(Donau)!5e0!3m2!1sde!2sde!4v1234567890"
                 width="100%"
-                height="400"
-                style={{ border: 0 }}
+                height="450"
+                style={{ border: 0, borderRadius: "1rem" }}
                 allowFullScreen
                 loading="lazy"
-                referrerPolicy="no-referrer-when-downgrade"
-                className="rounded-xl"
+                className="grayscale hover:grayscale-0 transition-all duration-500"
               />
             </div>
-          </div>
+          </FadeIn>
         </div>
       </section>
     </div>
