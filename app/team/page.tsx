@@ -73,8 +73,8 @@ export default function TeamPage() {
                       <span className="font-bold text-gray-900">Gemizoglou & Soukouldanos GbR</span>
                     </div>
                     <p className="text-gray-700 leading-relaxed">
-                      Hauptstr. 46<br />
-                      89584 Ehingen/Do
+                      Kornhausgasse 3<br />
+                      89584 Ehingen (Donau)
                     </p>
                   </div>
 

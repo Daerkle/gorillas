@@ -1,0 +1,7 @@
+{
+  "permissions": {
+    "allow": [
+      "Bash(git commit -m \"$\\(cat <<''EOF''\nInitial commit: Entrümpler-Gorillas Website\n\n- Next.js 14 mit App Router\n- Responsive Navigation mit Mobile Menu\n- Hero Section, Services, Team, FAQ, Kontakt\n- Cookie Banner und Datenschutz/Impressum/AGB Seiten\n- Calendly Integration \\(vorerst auskommentiert\\)\n- Tailwind CSS Styling\n\nCo-Authored-By: Claude Opus 4.5 <noreply@anthropic.com>\nEOF\n\\)\")"
+    ]
+  }
+}
